@@ -1,0 +1,33 @@
+﻿@model List<CiftciSatis.Data.Models.Ciftci>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_CiftciLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="col">
+                <p style="color:black;"></p>
+                <button id="cikis" type="button" class="btn btn-danger" value="reset" style="position:absolute; right:0px; height:60px; width:150px;">Çıkış</button>
+                <p style="color:black;">Çiftçi Adı @Model[0].CiftciAd</p>
+                <p style="color:black;">Çiftçi Soyadı @Model[0].CiftciSoyad</p>
+                <p style="color:black;">Çiftçi Email @Model[0].CiftciEmail</p>
+                <p style="color:black;">Çiftçi Adres @Model[0].CiftciAdres</p>
+            </div>
+            <br />
+            <h1 style="color:black;">Bakiye Bilgileri</h1>
+            <br />
+            <table style="width:25%;">
+                <tr>
+                    <td style="color:black; font-size:20px;">Bakiye :</td>
+                    <td style="color:black; font-size:20px;">@Model[0].CiftciBakiye</td>
+                    <td style="color:black; font-size:20px;">Türk Lirası</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

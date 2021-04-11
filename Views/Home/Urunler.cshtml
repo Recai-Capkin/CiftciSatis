@@ -1,0 +1,43 @@
+﻿@model List<CiftciSatis.Data.Models.Urunler>
+@{
+    ViewData["Title"] = "Urunler";
+    Layout = "~/Views/Shared/_CiftciLayout.cshtml";
+}
+
+
+<table class="table table-bordered" style="border-color:black">
+    <thead class="thead-dark">
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Ürün Fiyat</th>
+            <th>Ürün Tür</th>
+            <th>Ürün Miktar</th>
+            <th>Ürün Renk</th>
+            <th>Ürün Randıman</th>
+            <th>Ürün Kayıt Tarihi</th>
+
+            <th>Sil</th>
+            <th>Güncelle</th>
+            @*  <th>Sil Alert</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.UrunAd</td>
+                <td>@x.UrunFiyat</td>
+                <td>@x.UrunTur</td>
+                <td>@x.UrunMiktar</td>
+                <td>@x.UrunRenk</td>
+                <td>@x.UrunRandıman</td>
+                <td>@x.UrunKTarih</td>
+                <td><a href="/Home/Sil/@x.UrunId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/MUSTERI/MusteriGetir/@x.UrunId" class="btn btn-success">Güncelle</a></td>
+                @* <td>@Html.ActionLink("Sil", "Sil", new { id = x.UrunId }, new { @class = "btn btn-warning", onclick = "Gerçekten Silmek İstiyor musunuz ?" })</td>*@
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Home/YeniUrun" class="btn btn-primary">Yeni Ürün Ekle</a>
+

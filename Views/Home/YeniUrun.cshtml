@@ -1,0 +1,49 @@
+﻿@model List<CiftciSatis.Data.Models.Urunler>
+@{
+    ViewData["Title"] = "YeniUrun";
+    Layout = "~/Views/Shared/_CiftciLayout.cshtml";
+}
+<form method="post" class="form-group">
+    <div>
+        <label>Ürün Adı</label>
+        <input type="text" class="form-control" name="UrunAd" required="" maxlength="30" />
+    </div>
+    <div>
+        <label>Ürün Fiyatı</label>
+        <input type="text" class="form-control" name="UrunFiyat" required=""  />
+    </div>
+    <div>
+        <label>Ürün Türü</label>
+        <input type="text" class="form-control" name="UrunTur" />
+    </div>
+    <div>
+        <label>Ürün Stok Adet</label>
+        <input type="text" class="form-control" name="UrunMiktar" />
+    </div>
+    <div>
+        <label>Ürün Renk</label>
+        <input type="text" class="form-control" name="UrunRenk" />
+    </div>
+    <div>
+        <label>Ürün Randıman</label>
+        <input type="text" class="form-control" name="UrunRandıman" placeholder="Buraya 0 ile 100 arasında randıman değerinizi yazınız..." />
+    </div>
+    <div>
+        <label>Ürün Hasat Tarihi</label>
+        <input type="text" class="form-control" name="UrunKTarih" />
+    </div>
+    <div>
+        <label>Ürün Ciftci Id'si sonradan oto gelecek burası</label>
+        <input type="text" class="form-control" name="CiftciId" />
+    </div>
+    
+
+    <div>
+        <button class="btn btn-info" style="margin-top:15px" id="btn1">Yeni Ürün Ekle</button>
+    </div>
+    <script>
+        $('#btn1').click(function () {
+            alert("Yeni Ürün Eklendi")
+        });
+    </script>
+</form>
